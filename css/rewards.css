@@ -1,0 +1,241 @@
+/* Rewards Page Styles */
+
+/* HERO */
+.rewards-hero {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+.rewards-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.rewards-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  filter: brightness(0.45);
+}
+
+.rewards-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+.rewards-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 72px 96px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.rewards-hero-text h1 {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.rewards-hero-text p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* REWARDS CARD */
+.rewards-card-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rewards-card {
+  width: 340px;
+  height: 210px;
+  background: linear-gradient(135deg, #1c1c1c 0%, #2e2e2e 50%, #1c1c1c 100%);
+  border: 1px solid rgba(201,168,76,0.4);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.rewards-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.rewards-card-brand {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+.rewards-card-chip {
+  display: block;
+  width: 38px;
+  height: 28px;
+  background: linear-gradient(135deg, #c9a84c, #e8c96a);
+  border-radius: 4px;
+  opacity: 0.85;
+}
+
+.rewards-card-bot {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rewards-card-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+.rewards-card-number {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.6);
+}
+
+/* BENEFITS */
+.benefits-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 32px 20px;
+  border: 1px solid var(--gray-300);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.benefit-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.benefit-icon {
+  width: 52px; height: 52px;
+  border: 1px solid var(--gray-300);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  margin: 0 auto 16px;
+  color: var(--black);
+}
+
+.benefit-card h4 {
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 8px; letter-spacing: 0.02em;
+}
+
+.benefit-card p {
+  font-size: 13px; color: var(--gray-600); line-height: 1.6;
+}
+
+/* TIERS */
+.tiers-section {
+  background: var(--black);
+  padding: 64px 0;
+}
+
+.tiers-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.tier-card {
+  padding: 40px 36px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.tier-card:last-child { border-right: none; }
+
+.tier-top { margin-bottom: 24px; }
+
+.tier-card h3 {
+  font-size: 16px; font-weight: 700;
+  letter-spacing: 0.16em; margin-bottom: 6px;
+}
+
+.tier-pts { font-size: 12px; opacity: 0.5; letter-spacing: 0.04em; }
+
+.tier-badge { font-size: 32px; margin-bottom: 20px; }
+
+.tier-perks { list-style: none; }
+.tier-perks li { font-size: 14px; margin-bottom: 8px; opacity: 0.8; }
+
+.tier-silver { color: var(--silver); }
+.tier-silver .tier-badge { color: var(--silver); }
+.tier-gold { color: var(--gold); }
+.tier-gold .tier-badge { color: var(--gold); }
+.tier-diamond { color: #a8d8f0; }
+.tier-diamond .tier-badge { color: #a8d8f0; }
+
+/* HOW IT WORKS */
+.hiw-header { text-align: center; margin-bottom: 48px; }
+
+.hiw-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hiw-step { text-align: center; width: 200px; }
+
+.hiw-icon {
+  width: 64px; height: 64px;
+  border: 1px solid var(--gray-300);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 12px;
+  color: var(--black);
+}
+
+.hiw-num { font-size: 13px; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.04em; }
+.hiw-step h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.hiw-step p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+.hiw-arrow { font-size: 20px; color: var(--gray-400); margin-top: -20px; }

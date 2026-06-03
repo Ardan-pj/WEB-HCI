@@ -1,0 +1,197 @@
+/* About Page Styles */
+
+/* STORY */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.about-story-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 56px 80px 96px;
+  background: var(--white);
+}
+
+.about-headline {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 12px 0 24px;
+}
+
+.about-body {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+/* MOSAIC */
+.about-story-images {
+  overflow: hidden;
+}
+
+.about-mosaic {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  gap: 4px;
+}
+
+.mosaic-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.mosaic-main img,
+.mosaic-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.mosaic-main:hover img,
+.mosaic-secondary:hover img {
+  transform: scale(1.04);
+}
+
+.mosaic-secondary {
+  overflow: hidden;
+}
+
+.mosaic-brand-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 16px;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(4px);
+}
+
+/* STATS */
+.stats-section {
+  border-top: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-300);
+  padding: 56px 0;
+  background: var(--gray-100);
+}
+
+.stats-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  width: 48px; height: 48px;
+  border: 1px solid var(--gray-300);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  color: var(--black);
+  background: var(--white);
+  flex-shrink: 0;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 64px;
+  background: var(--gray-300);
+}
+
+/* PHILOSOPHY */
+.philosophy-section {
+  padding: 80px 0;
+}
+
+.philosophy-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 96px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.philosophy-title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+
+.philosophy-text p:last-child {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.85;
+}
+
+/* PHILOSOPHY IMAGE GRID */
+.philosophy-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 280px 200px;
+  gap: 8px;
+}
+
+.phil-img {
+  overflow: hidden;
+}
+
+.phil-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.phil-img:hover img { transform: scale(1.05); }
+
+.phil-wide {
+  grid-column: 1 / -1;
+}
+
+.phil-sq-left { grid-column: 1; }
+.phil-sq-right { grid-column: 2; }

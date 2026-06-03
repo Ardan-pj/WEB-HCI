@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eNVision – Our Collection</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">e<span>N</span>Vision</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html" class="active">Products</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button><i class="fa-regular fa-user"></i></button>
+        <button><i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <h1>Our Collection</h1>
+      <p>Discover eyewear that fits your style and elevates your vision.</p>
+    </div>
+  </div>
+
+  <div class="catalog-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>Categories</h3>
+        <ul class="category-list">
+          <li class="active"><a href="#">All Products</a></li>
+          <li><a href="#">Sunglasses</a></li>
+          <li><a href="#">Optical Frames</a></li>
+          <li><a href="#">Blue Light Glasses</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Filter By</h3>
+        <div class="filter-group">
+          <h4>Price</h4>
+          <div class="price-range">
+            <div class="price-labels"><span>$0</span><span>$300+</span></div>
+            <input type="range" min="0" max="300" value="300" class="range-slider" />
+          </div>
+        </div>
+        <div class="filter-group">
+          <h4>Gender</h4>
+          <label class="checkbox-label"><input type="checkbox" checked /> All</label>
+          <label class="checkbox-label"><input type="checkbox" /> Men</label>
+          <label class="checkbox-label"><input type="checkbox" /> Women</label>
+          <label class="checkbox-label"><input type="checkbox" /> Unisex</label>
+        </div>
+        <div class="filter-group">
+          <h4>Material</h4>
+          <label class="checkbox-label"><input type="checkbox" /> Metal</label>
+          <label class="checkbox-label"><input type="checkbox" /> Acetate</label>
+          <label class="checkbox-label"><input type="checkbox" /> Titanium</label>
+        </div>
+        <div class="filter-group">
+          <h4>Lens Type</h4>
+          <label class="checkbox-label"><input type="checkbox" /> Polarized</label>
+          <label class="checkbox-label"><input type="checkbox" /> Photochromic</label>
+          <label class="checkbox-label"><input type="checkbox" /> Anti-Reflective</label>
+        </div>
+      </div>
+    </aside>
+
+    <main class="catalog-main">
+      <div class="catalog-toolbar">
+        <p class="catalog-count">Showing 1–9 of 24</p>
+        <div class="sort-bar">
+          <span>Sort by:</span>
+          <select>
+            <option>Newest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Best Selling</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="catalog-grid">
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500&q=80&fit=crop" alt="EV-Classic Shadow" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Classic Shadow</p>
+          <p class="product-card-price">$148.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=500&q=80&fit=crop" alt="EV-Aurora Gold" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Aurora Gold</p>
+          <p class="product-card-price">$178.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=500&q=80&fit=crop" alt="EV-Urban Clear" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Urban Clear</p>
+          <p class="product-card-price">$138.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1625591342274-013866180a44?w=500&q=80&fit=crop" alt="EV-Vision Pro" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Vision Pro</p>
+          <p class="product-card-price">$199.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&q=80&fit=crop" alt="EV-Retro Round" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Retro Round</p>
+          <p class="product-card-price">$158.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=500&q=80&fit=crop" alt="EV-Light Titanium" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Light Titanium</p>
+          <p class="product-card-price">$189.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=500&q=80&fit=crop" alt="EV-Black Edition" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Black Edition</p>
+          <p class="product-card-price">$169.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?w=500&q=80&fit=crop" alt="EV-Transparent" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Transparent</p>
+          <p class="product-card-price">$129.00</p>
+        </div>
+
+        <div class="product-card" onclick="location.href='order.html'">
+          <div class="product-card-image">
+            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80&fit=crop&crop=center" alt="EV-Polarized Elite" loading="lazy"/>
+          </div>
+          <p class="product-card-name">EV-Polarized Elite</p>
+          <p class="product-card-price">$209.00</p>
+        </div>
+
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">&#8250;</button>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">eNVision</span>
+        <p>eNVision is a modern optical store dedicated to providing premium eyewear and exceptional service.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="product.html">All Products</a></li>
+          <li><a href="product.html">Sunglasses</a></li>
+          <li><a href="product.html">Optical Frames</a></li>
+          <li><a href="product.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Our Stores</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Get the latest updates and special offers.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 eNVision. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

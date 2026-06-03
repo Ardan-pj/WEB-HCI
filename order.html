@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eNVision – Place Your Order</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/order.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">e<span>N</span>Vision</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button><i class="fa-regular fa-user"></i></button>
+        <button><i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ORDER HEADER -->
+  <div class="order-header">
+    <div class="order-header-inner">
+      <h1>Place Your Order</h1>
+      <p>Fill in your details and we'll take care of the rest.</p>
+    </div>
+  </div>
+
+  <!-- ORDER FORM -->
+  <div class="order-layout">
+    <div class="order-form-grid">
+
+      <!-- COL 1: PERSONAL + PRESCRIPTION -->
+      <div class="order-col">
+        <!-- 1. PERSONAL INFO -->
+        <div class="form-section">
+          <h3><span class="form-num">1.</span> Personal Information</h3>
+
+          <div class="form-group">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" placeholder="Enter your full name" />
+          </div>
+          <div class="form-group">
+            <label>Email Address <span class="req">*</span></label>
+            <input type="email" placeholder="Enter your email" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span class="req">*</span></label>
+            <input type="tel" placeholder="Enter your phone number" />
+          </div>
+        </div>
+
+        <!-- 2. PRESCRIPTION -->
+        <div class="form-section">
+          <h3><span class="form-num">2.</span> Prescription Details</h3>
+
+          <div class="form-group">
+            <label>Prescription Type <span class="req">*</span></label>
+            <select>
+              <option value="" disabled selected>Select type</option>
+              <option>Single Vision</option>
+              <option>Bifocal</option>
+              <option>Progressive</option>
+              <option>No Prescription</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Upload Prescription</label>
+            <div class="upload-box">
+              <input type="file" id="prescFile" accept=".jpg,.png,.pdf" hidden />
+              <label for="prescFile" class="upload-label">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span>Click to upload or drag and drop</span>
+                <small>JPG, PNG, PDF (Max 5MB)</small>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 2: ORDER DETAILS + ADD-ONS -->
+      <div class="order-col">
+        <!-- 3. ORDER DETAILS -->
+        <div class="form-section">
+          <h3><span class="form-num">3.</span> Order Details</h3>
+
+          <div class="form-group">
+            <label>Select Product <span class="req">*</span></label>
+            <select>
+              <option value="" disabled selected>Choose a product</option>
+              <option>EV-Classic Shadow – $148.00</option>
+              <option>EV-Aurora Gold – $178.00</option>
+              <option>EV-Urban Clear – $138.00</option>
+              <option>EV-Vision Pro – $199.00</option>
+              <option>EV-Retro Round – $158.00</option>
+              <option>EV-Light Titanium – $189.00</option>
+              <option>EV-Black Edition – $169.00</option>
+              <option>EV-Transparent – $129.00</option>
+              <option>EV-Polarized Elite – $209.00</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Lens Type <span class="req">*</span></label>
+            <select>
+              <option value="" disabled selected>Select lens type</option>
+              <option>Clear</option>
+              <option>Tinted</option>
+              <option>Polarized (+$30)</option>
+              <option>Photochromic (+$45)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Coating</label>
+            <select>
+              <option value="" disabled selected>Select coating</option>
+              <option>None</option>
+              <option>Anti-Reflective (+$20)</option>
+              <option>Blue Light Filter (+$25)</option>
+              <option>UV Protection (+$15)</option>
+            </select>
+          </div>
+          <div class="form-group qty-group">
+            <label>Quantity</label>
+            <div class="qty-control">
+              <button type="button" class="qty-btn" onclick="changeQty(-1)">−</button>
+              <input type="number" id="qtyInput" value="1" min="1" max="10" />
+              <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ADD-ONS -->
+        <div class="form-section">
+          <h3><span class="form-num">4.</span> Add-Ons (Optional)</h3>
+          <label class="addon-label">
+            <input type="checkbox" onchange="updateTotal()" data-price="30" />
+            <span>Blue Light Protection (+ $30)</span>
+          </label>
+          <label class="addon-label">
+            <input type="checkbox" onchange="updateTotal()" data-price="25" />
+            <span>Anti-Reflective Coating (+ $25)</span>
+          </label>
+          <label class="addon-label">
+            <input type="checkbox" onchange="updateTotal()" data-price="20" />
+            <span>Scratch-Resistant (+ $20)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- COL 3: PAYMENT + SUMMARY -->
+      <div class="order-col">
+        <!-- 5. PAYMENT -->
+        <div class="form-section">
+          <h3><span class="form-num">5.</span> Payment Method</h3>
+
+          <label class="payment-label">
+            <div class="payment-left">
+              <input type="radio" name="payment" value="card" checked />
+              <span>Credit / Debit Card</span>
+            </div>
+            <div class="payment-icons">
+              <span class="pay-icon pay-visa">VISA</span>
+              <span class="pay-icon pay-mc">MC</span>
+              <span class="pay-icon pay-amex">AMEX</span>
+            </div>
+          </label>
+          <label class="payment-label">
+            <div class="payment-left">
+              <input type="radio" name="payment" value="paypal" />
+              <span>PayPal</span>
+            </div>
+            <div class="payment-icons">
+              <span class="pay-icon pay-paypal">PayPal</span>
+            </div>
+          </label>
+          <label class="payment-label">
+            <div class="payment-left">
+              <input type="radio" name="payment" value="transfer" />
+              <span>Bank Transfer</span>
+            </div>
+            <div class="payment-icons">
+              <i class="fa-solid fa-building-columns" style="font-size:18px;color:var(--gray-500)"></i>
+            </div>
+          </label>
+        </div>
+
+        <!-- 6. ORDER SUMMARY -->
+        <div class="form-section order-summary-box">
+          <h3>Order Summary</h3>
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="subtotal">$148.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Add-ons</span>
+            <span id="addons-total">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Shipping</span>
+            <span>$10.00</span>
+          </div>
+          <div class="summary-line summary-total">
+            <span>Total</span>
+            <span id="grand-total">$158.00</span>
+          </div>
+          <button class="btn-place-order" onclick="placeOrder()">Place Order</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h3>Order Placed!</h3>
+      <p>Thank you for your order. We'll send a confirmation to your email shortly.</p>
+      <button onclick="closeModal()" class="btn-primary" style="width:100%;text-align:center;">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">eNVision</span>
+        <p>eNVision is a modern optical store dedicated to providing premium eyewear and exceptional service.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="product.html">All Products</a></li>
+          <li><a href="product.html">Sunglasses</a></li>
+          <li><a href="product.html">Optical Frames</a></li>
+          <li><a href="product.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Our Stores</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Get the latest updates and special offers.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 eNVision. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>

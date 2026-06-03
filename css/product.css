@@ -1,0 +1,225 @@
+/* ===========================
+   Product Page Styles
+   =========================== */
+
+.page-header {
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-300);
+  padding: 40px 0;
+}
+
+.page-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+/* LAYOUT */
+.catalog-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 48px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  flex-shrink: 0;
+}
+
+.sidebar-section {
+  margin-bottom: 36px;
+}
+
+.sidebar-section h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+
+.category-list li {
+  margin-bottom: 10px;
+}
+
+.category-list li a {
+  font-size: 14px;
+  color: var(--gray-600);
+  transition: color var(--transition);
+}
+
+.category-list li a:hover,
+.category-list li.active a {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray-700);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--black);
+  cursor: pointer;
+}
+
+/* PRICE RANGE */
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 8px;
+}
+
+.range-slider {
+  width: 100%;
+  accent-color: var(--black);
+  cursor: pointer;
+}
+
+/* CATALOG MAIN */
+.catalog-main {}
+
+.catalog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.catalog-count {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.sort-bar select {
+  border: 1px solid var(--gray-300);
+  padding: 6px 10px;
+  font-size: 13px;
+  background: var(--white);
+  cursor: pointer;
+  outline: none;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* GLASSES FRAMES IN PRODUCT CARDS */
+.gp-frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gp-dark-sm   { background: linear-gradient(145deg, #d4c9b8, #b5a99a); }
+.gp-gold-sm   { background: linear-gradient(145deg, #ede3cc, #d4c090); }
+.gp-clear-sm  { background: linear-gradient(145deg, #dce8f0, #c4d4e0); }
+.gp-vision-sm { background: linear-gradient(145deg, #c8c8c8, #a0a0a0); }
+.gp-retro-sm  { background: linear-gradient(145deg, #c4b8a8, #a89880); }
+.gp-titan-sm  { background: linear-gradient(145deg, #d8d8d8, #b8b8c8); }
+.gp-black-sm  { background: linear-gradient(145deg, #4a4a4a, #2a2a2a); }
+.gp-trans-sm  { background: linear-gradient(145deg, #e8e0d8, #d4ccc4); }
+.gp-polar-sm  { background: linear-gradient(145deg, #1a2a3a, #0a1520); }
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1px solid var(--gray-300);
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--black);
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn:hover,
+.page-btn.active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* Real image support */
+.product-card-image {
+  background: var(--gray-100);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease;
+  display: block;
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.06);
+}

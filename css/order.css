@@ -1,0 +1,344 @@
+/* ===========================
+   Order Page Styles
+   =========================== */
+
+.order-header {
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-300);
+  padding: 40px 0;
+}
+
+.order-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.order-header h1 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.order-header p {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+/* LAYOUT */
+.order-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 48px 80px;
+}
+
+.order-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.order-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* FORM SECTION */
+.form-section {
+  border: 1px solid var(--gray-300);
+  padding: 28px 24px;
+}
+
+.form-section h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-num {
+  color: var(--gray-400);
+}
+
+/* FORM CONTROLS */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  border: 1px solid var(--gray-300);
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition);
+  appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--black);
+}
+
+.form-group input::placeholder {
+  color: var(--gray-400);
+}
+
+.req { color: #c0392b; }
+
+/* QTY */
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-300);
+  width: fit-content;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.qty-btn:hover { background: var(--gray-200); }
+
+.qty-control input {
+  width: 48px;
+  border: none;
+  border-left: 1px solid var(--gray-300);
+  border-right: 1px solid var(--gray-300);
+  text-align: center;
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  padding: 8px 0;
+  height: 36px;
+}
+
+.qty-control input::-webkit-inner-spin-button,
+.qty-control input::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+/* UPLOAD */
+.upload-box {
+  border: 1px dashed var(--gray-400);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.upload-box:hover { border-color: var(--black); }
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--gray-600);
+}
+
+.upload-label i {
+  font-size: 24px;
+  color: var(--gray-400);
+}
+
+.upload-label span {
+  font-size: 13px;
+}
+
+.upload-label small {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+/* ADD-ONS */
+.addon-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--black);
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.addon-label input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--black);
+  cursor: pointer;
+}
+
+/* PAYMENT */
+.payment-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-200);
+  cursor: pointer;
+}
+
+.payment-label:last-child { border-bottom: none; }
+
+.payment-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.payment-left input[type="radio"] {
+  accent-color: var(--black);
+  cursor: pointer;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pay-icon {
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.pay-visa    { background: #1a1f71; color: white; }
+.pay-mc      { background: #eb001b; color: white; }
+.pay-amex    { background: #007bc1; color: white; }
+.pay-paypal  { background: #003087; color: white; }
+
+/* ORDER SUMMARY */
+.order-summary-box h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--gray-600);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.summary-line:last-of-type { border-bottom: none; }
+
+.summary-total {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 2px solid var(--black) !important;
+  border-bottom: none !important;
+}
+
+.btn-place-order {
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid var(--black);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-place-order:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--white);
+  padding: 48px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon {
+  font-size: 48px;
+  color: #27ae60;
+  margin-bottom: 16px;
+}
+
+.modal-box h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.modal-box p {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
